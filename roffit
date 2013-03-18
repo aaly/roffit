@@ -33,7 +33,7 @@ my $mandir;
 my $hrefdir=".";
 
 my $encoding = "";
-my $homepage = "https://github.com/keithbowes/roffit";
+my $homepage = "https://github.com/aaly/roffit";
 
 while($ARGV[0]) {
     if($ARGV[0] eq "--bare") {
@@ -558,7 +558,7 @@ else {
 
 print $OutFH @conv;
 print $OutFH <<ROFFIT
-<div class="roffit">
+<div class="roffit" align="middle">
  This HTML page was made with <a href="$homepage">roffit $version</a>.
 </div>
 ROFFIT
