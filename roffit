@@ -285,7 +285,7 @@ sub parsefile {
                 $rest =~ s/\"//g; # cut off quotes
                 $rest =~ s/</&lt;/g;
                 $rest =~ s/>/&gt;/g;
-                $out = "<h2 class=\"nroffsh\" id=\"$name\">$rest</h2>";
+		$out = "<h2 class=\"nroffsh\" id=\"$name\">$rest</h2>";
                 $indentlevel=0;
                 $within_tp=0;
             }
