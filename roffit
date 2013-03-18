@@ -270,7 +270,7 @@ sub parsefile {
 		}
             }
             elsif($keyword =~ /^S[HS]$/) {
-                # SS is treated the same as SH
+                # SS is treated the same as SH, not really
                 # Section Header
                 showp(@p);
                 @p="";
@@ -285,7 +285,14 @@ sub parsefile {
                 $rest =~ s/\"//g; # cut off quotes
                 $rest =~ s/</&lt;/g;
                 $rest =~ s/>/&gt;/g;
-		$out = "<h2 class=\"nroffsh\" id=\"$name\">$rest</h2>";
+                if($keyword =~ /^SH$/i)
+                {
+                        $out = "<h2 class=\"nroffsh\" id=\"$name\">$rest</h2>";
+                }
+                elsif($keyword =~ /^SS$/i)
+                {
+                        $out = "<h3 class=\"nroffsh\" id=\"$name\">$rest</h3>";
+                }
                 $indentlevel=0;
                 $within_tp=0;
             }
