@@ -332,7 +332,7 @@ sub parsefile {
                 @p="";
                 $indentlevel--;
             }
-            elsif($keyword =~ /^NF$/) {
+            elsif($keyword =~ /^[nN][fF]$/) { #some of us actually write it in lowercase
                 # We let nf start a <pre> section .nf = no-fill, you use for
                 # graphs or text that you don't want spaces to be ignored
 
